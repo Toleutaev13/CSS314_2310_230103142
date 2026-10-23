@@ -1,0 +1,10 @@
+Student ID: 230103142
+Operating System: Windows-10-10.0.19045-SP0
+CPU / Platform: Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+Logical CPU cores: 8
+Array size: 20000000
+Data type: float64
+Execution mode: Serial (single thread)
+Mathematical sum: 9997708.8646199349
+Standard deviation: 0.2887170064
+Wall-clock time: 9269.01 ms
