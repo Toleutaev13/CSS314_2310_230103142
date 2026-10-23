@@ -1,0 +1,22 @@
+=======================================================
+TASK 6: SYNCHRONIZATION COST & DATA LOSS
+=======================================================
+Threads: 4
+Increments per thread: 2,000,000
+Expected final value: 8,000,000
+
+--- WITHOUT LOCK ---
+Actual final value: 5,723,239
+Lost updates: 2,276,761
+Updates lost: 28.46%
+Execution time: 1.2791 seconds
+
+--- WITH LOCK ---
+Actual final value: 8,000,000
+Execution time: 2.5013 seconds
+Correct result: True
+
+--- SYNCHRONIZATION COST ---
+Time difference: 1.2222 seconds
+Relative time penalty: 95.56%
+=======================================================
