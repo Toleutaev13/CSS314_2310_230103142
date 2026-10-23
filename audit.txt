@@ -1,0 +1,11 @@
+
+9ff569a - 2026-10-23 : feat: task 8 compute geometry
+7d818c3 - 2026-10-23 : feat: task 7 memory bandwidth saturation
+89c1dff - 2026-10-23 : feat: task 6 race condition forensics
+a2b6723 - 2026-10-23 : feat: task 5 overhead crossover
+f129b32 - 2026-10-23 : feat: task 4 scheduling under skew
+8bc1d3d - 2026-10-23 : feat: task 3 false sharing profile
+89bab2d - 2026-10-23 : feat: task 2 amdahl scaling
+eefa14f - 2026-10-23 : feat: task 1 baseline execution
+abd1539 - 2026-10-23 : Update README.md
+42d8b50 - 2026-10-23 : Initial commit
