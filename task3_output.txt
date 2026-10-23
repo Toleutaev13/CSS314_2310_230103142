@@ -1,0 +1,18 @@
+Task 3: Cache Line Contention
+Student ID: 230103142
+OS: Windows-10-10.0.19045-SP0
+CPU: Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+Physical cores / worker threads: 8
+Iterations per thread: 50,000,000
+
+Running unpadded shared counters...
+Running local counters...
+
+Method                      Wall Time (ms)
+-------------------------------------------
+Unpadded Shared                   53619.53
+Local Variables                   32457.59
+Execution Ratio                      1.65x
+
+Total increments per run: 400,000,000
+Validation: PASSED
