@@ -1,0 +1,20 @@
+========================================================================
+TASK 3: PREFIX SCAN - STEP VS. WORK EFFICIENCY
+========================================================================
+Student ID: 230103142
+Array length: 2,000,000
+Input values: integers from 1 to 10
+Parallel workers: 4
+Repeats per method: 3
+
+--- RESULTS ---
+Serial Time (ms):   7.06
+Parallel Time (ms): 12.66
+Speedup:            0.558x
+Verification Status: PASS
+Serial final value:   10,999,980
+Parallel final value: 10,999,980
+
+Note: Parallel timing includes thread-pool setup and result assembly.
+For this workload, overhead can make the parallel version slower.
+========================================================================
