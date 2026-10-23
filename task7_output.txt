@@ -1,0 +1,38 @@
+==============================================================================
+TASK 7: ARITHMETIC INTENSITY VS. MEMORY BOTTLENECKS
+==============================================================================
+Array size: 30,000,000 elements
+Data type: float32
+Logical CPU cores available: 8
+Worker counts tested: [1, 2, 8]
+Repeats per test: 3
+Times are median kernel execution times.
+Thread-pool creation is excluded from timed measurements.
+
+--- Kernel A: Memory-Bound: B[i] = A[i] ---
+   Cores |     Time (s) |    Speedup |   Efficiency
+----------------------------------------------------
+       1 |       0.0144 |      1.000 |      100.00%
+         Effective data bandwidth: 16.64 GB/s
+       2 |       0.0164 |      0.878 |       43.89%
+         Effective data bandwidth: 14.61 GB/s
+       8 |       0.0179 |      0.805 |       10.06%
+         Effective data bandwidth: 13.40 GB/s
+
+--- Kernel B: Compute-Bound: sin(A[i])*cos(A[i]) + tan(A[i]) ---
+   Cores |     Time (s) |    Speedup |   Efficiency
+----------------------------------------------------
+       1 |       0.2653 |      1.000 |      100.00%
+       2 |       0.1761 |      1.507 |       75.34%
+       8 |       0.1257 |      2.111 |       26.38%
+
+--- SCALING ANALYSIS ---
+Efficiency = Speedup / Cores
+Efficiency is shown as a percentage in the tables.
+Kernel A speedup: 2 cores = 0.878, 8 cores = 0.805
+Kernel B speedup: 2 cores = 1.507, 8 cores = 2.111
+Scaling conclusion: Kernel A (memory copy) shows stronger scaling saturation than Kernel B.
+This is consistent with a RAM bandwidth bottleneck, but timings alone cannot prove the exact hardware cause.
+
+Note: Results depend on the CPU, RAM, operating system, and NumPy build.
+==============================================================================
