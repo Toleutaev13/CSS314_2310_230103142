@@ -1,0 +1,24 @@
+====================================================================
+TASK 2: PSEUDO-RANDOM GENERATOR STATE BOTTLENECK
+====================================================================
+Student ID: 230103142
+Monte Carlo points: 40,000,000
+Threads: 4
+Chunk size: 250,000
+Starting benchmarks...
+
+--- SHARED PRNG (LOCKED) ---
+Computed pi: 3.1417949000
+Absolute error: 0.0002022464
+Wall time: 536.93 ms
+
+--- INDEPENDENT PRNGs ---
+Computed pi: 3.1417983000
+Absolute error: 0.0002056464
+Wall time: 519.04 ms
+
+--- COMPARISON ---
+Speedup from independent PRNGs: 1.034x
+Independent PRNGs were faster in this benchmark.
+Note: The shared lock protects batches of random-number generation. Results also depend on NumPy, Python, and CPU thread behavior.
+====================================================================
