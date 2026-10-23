@@ -1,0 +1,26 @@
+Task 5: Parallel Overhead Crossover
+Student ID: 230103142
+Logical CPU cores: 8
+Workers: 8
+Repeats per test: 3
+Operation: y[i] = 2.5 * x[i] + 1.5
+Timing includes process pool startup and shutdown.
+Reported times are medians in milliseconds.
+
+           N |  Serial (ms) |  Parallel (ms) |   Speedup | Result
+----------------------------------------------------------------------------
+         100 |         0.01 |         315.16 |     0.000 | SLOWER
+       1,000 |         0.12 |         359.55 |     0.000 | SLOWER
+      10,000 |         1.03 |         333.33 |     0.003 | SLOWER
+     100,000 |        13.41 |         329.77 |     0.041 | SLOWER
+   1,000,000 |       150.26 |         381.75 |     0.394 | SLOWER
+  10,000,000 |      1548.10 |         712.38 |     2.173 | FASTER
+
+CROSSOVER ANALYSIS
+----------------------------------------
+Last slower tested size: N = 1,000,000
+First faster tested size: N = 10,000,000
+Observed crossover bracket: 1,000,000 < N <= 10,000,000
+
+Note: the bracket is based on tested sizes.
+It does not claim an exact crossover at every possible N.
