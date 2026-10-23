@@ -1,0 +1,34 @@
+========================================================================
+TASK 8: CPU PARALLEL MATRIX MULTIPLICATION
+========================================================================
+Matrix size: 1024 x 1024
+CPU logical cores: 8
+Worker threads: 8
+Repeats per configuration: 3
+Timing excludes thread-pool creation.
+
+Non-tiled
+Runtime: 0.0143 seconds
+Correct result: True
+
+Tiled 16x16
+Runtime: 0.1730 seconds
+Correct result: True
+
+Tiled 64x64
+Runtime: 0.0323 seconds
+Correct result: True
+
+--- PERFORMANCE COMPARISON ---
+Configuration    |  Runtime (s) |   Speedup
+--------------------------------------------
+Non-tiled        |       0.0143 |    1.000x
+Tiled 16x16      |       0.1730 |    0.083x
+Tiled 64x64      |       0.0323 |    0.445x
+
+--- CACHE LOCALITY ANALYSIS ---
+Fastest configuration: Non-tiled
+Slowest configuration: Tiled 16x16
+Tiling can improve cache locality by working on smaller matrix regions, but the best block size depends on the CPU and NumPy/BLAS.
+Cache-miss latency was not measured directly; runtime is only an indirect indicator. Hardware performance counters are required to count actual cache misses.
+========================================================================
