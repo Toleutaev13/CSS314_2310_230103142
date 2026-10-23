@@ -1,0 +1,30 @@
+=================================================================
+TASK 1: SPATIAL CACHE PROFILING
+=================================================================
+Student ID: 230103142
+Logical cores: 8
+Physical cores detected: 4
+Parallel workers: 4
+Matrix size: 8000 x 8000
+Data type: float64
+Matrix storage order: C-order (row-major)
+Allocating matrix...
+Matrix memory: 488.28 MiB
+
+Running Mode A: Row-Major...
+Running Mode B: Column-Major / Strided...
+
+--- RESULTS ---
+Student ID: 230103142
+Logical core count: 8
+Workers used: 4
+Mode A (Row-Major): 48.91 ms
+Mode B (Column-Major / Strided): 34.75 ms
+Cache penalty factor (B / A): 0.710x
+Row-major sum: 32001736.712290
+Column-major sum: 32001736.712290
+Sums match: True
+Conclusion: Column-major traversal was faster in this test.
+Note: Runtime differences are consistent with traversal effects,
+but timing alone does not directly measure CPU cache misses.
+=================================================================
