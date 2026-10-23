@@ -1,0 +1,17 @@
+Student ID: 230103142
+Operating System: Windows-10-10.0.19045-SP0
+Logical CPU cores: 8
+Array size: 20000000
+Data type: float64
+Parallel method: ProcessPoolExecutor
+Amdahl parallel fraction: 95%
+
+     Cores |  Wall Time (ms) |    Speedup |  Amdahl Upper Bound
+-----------------------------------------------------------------
+         1 |          475.42 |      1.000 |               1.000
+         2 |          420.96 |      1.129 |               1.905
+         4 |          536.01 |      0.887 |               3.478
+         8 |          729.27 |      0.652 |               5.926
+        16 |         1271.74 |      0.374 |               9.143
+
+Reference sum: 9999803.7844886985
