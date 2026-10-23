@@ -1,0 +1,37 @@
+Task 4: Work Scheduling Under Skew
+Student ID: 230103142
+OS: Windows-10-10.0.19045-SP0
+Total items: 1000
+Parallel workers: 4
+Simulated cost: sleep(0.0001 * (i % 20))
+Dynamic chunk size: 1
+
+Strategy A: Static Chunk Distribution
+------------------------------------------------
+Total execution time: 340.25 ms
+Thread completion times:
+  Thread 0: 326.90 ms
+  Thread 1: 340.17 ms
+  Thread 2: 334.95 ms
+  Thread 3: 340.14 ms
+Minimum completion time: 326.90 ms
+Maximum completion time: 340.17 ms
+First-to-last completion delta: 13.27 ms
+
+Strategy B: Dynamic Work Queue
+------------------------------------------------
+Total execution time: 336.80 ms
+Thread completion times:
+  Thread 0: 335.56 ms
+  Thread 1: 334.88 ms
+  Thread 2: 336.74 ms
+  Thread 3: 335.65 ms
+Minimum completion time: 334.88 ms
+Maximum completion time: 336.74 ms
+First-to-last completion delta: 1.86 ms
+
+Comparison
+------------------------------------------------
+Static total time:  340.25 ms
+Dynamic total time: 336.80 ms
+Result: Dynamic scheduling was faster.
