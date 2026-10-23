@@ -1,0 +1,9 @@
+========================================================================================
+TASK 5: THREAD OVERSUBSCRIPTION THRESHOLD
+========================================================================================
+Logical CPU cores: 8
+CPU-bound tasks: 10,000
+Hashes per task: 500
+Payload size: 1,024 bytes
+Repeats per pool size: 2
+Timing includes thread-pool creation, scheduling, and shutdown.
